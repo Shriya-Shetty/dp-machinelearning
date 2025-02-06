@@ -11,11 +11,11 @@ with st.expander('Data'):
   st.write('==Raw Data==')
   df=pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/penguins_cleaned.csv')
   df
-  st.write('**X**')
+  st.write('==X==')
   X_raw = df.drop('species', axis=1)
   X_raw
 
-  st.write('**y**')
+  st.write('==Y==')
   y_raw = df.species
   y_raw
 
@@ -43,9 +43,9 @@ with st.sidebar:
   input_penguins = pd.concat([input_df, X_raw], axis=0)
 
 with st.expander('Input features'):
-  st.write('**Input penguin**')
+  st.write('==Input penguin==')
   input_df
-  st.write('**Combined penguins data**')
+  st.write('==Combined penguins data==')
   input_penguins
 
 
